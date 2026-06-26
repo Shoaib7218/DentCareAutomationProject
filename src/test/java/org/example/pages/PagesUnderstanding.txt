@@ -1,0 +1,3 @@
+The Page class should represent what a user can do on that page, not how Selenium finds elements.
+
+and then it is used in tests for various test cases.
