@@ -27,7 +27,7 @@ public class ResigtrationTest extends BaseTest {
 
        driver.get("http://localhost:5173/register");
        System.out.println(driver.getCurrentUrl());
-       rgp.register("Shoaib Shaikh","shaikh2@gmail.com","Shoaib123","1234567890");
+       rgp.register("Shoaib Shaikh","rocky2@gmail.com","Shoaib123","1234567890");
        Thread.sleep(10000);
        Assert.assertTrue(driver.getCurrentUrl().contains("verify-otp"));
 
@@ -53,15 +53,15 @@ public class ResigtrationTest extends BaseTest {
 
        driver.get("http://localhost:5173/register");
 
-       rpg.register("Shoaib Shaikh","tes@gmail.com","Shoaib123","1234567890");
+       rpg.register("Shoaib Shaikh","rocky1@gmail.com","Shoaib123","1234567890");
 
        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        wait.until(ExpectedConditions.urlContains("verify-otp"));
 
-       String otpValue = checkOtp("tes@gmail.com");
+       String otpValue = checkOtp("rocky1@gmail.com");
        System.out.println("OTP received: [" + otpValue + "]");
 
-       otp.sendOtp("tes@gmail.com",checkOtp("tes@gmail.com"));
+       otp.sendOtp("rocky1@gmail.com",checkOtp("rocky1@gmail.com"));
 
 
 
