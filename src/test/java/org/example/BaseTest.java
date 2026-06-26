@@ -9,12 +9,12 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    public WebDriver driver = new ChromeDriver();
+    public WebDriver driver;
 
 
     @BeforeMethod
     public void setUp(){
-
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         System.out.println("Test Started");
