@@ -53,6 +53,6 @@ public class LoginTest extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.not(ExpectedConditions.urlContains("login")));
         Assert.assertTrue(driver.getCurrentUrl().contains("admin"));
-
+        // we are applying afterMethod so after one test we cannot navigate to anorther page in a whole diff test.
     }
 }
